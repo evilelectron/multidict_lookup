@@ -1,0 +1,43 @@
+#tfd{
+	position:absolute;
+	z-index:99999;
+	width:320px;
+	height:190px;
+	padding:5px;
+	background-color:white;
+	border-radius: 0.5em;
+	border: 1px solid #59829C;
+	font-family: sans-serif;
+	color:black;
+	font-size: 1em !important;
+}
+
+#tfd-lookup{
+	margin-bottom: 10px;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 5px;
+	overflow-y: auto;
+	height:75%;
+	width:95%;
+	font-size:12px;
+	border-radius: 0.5em;
+}
+
+#tfd-loading{
+	height: 100%;
+	background: url('resource://multidict/icons/loading.gif') no-repeat center white;
+}
+
+
+#tfd a {
+	color: blue;
+}
+#attribution{
+	float:right;
+	font-size:10px;
+	padding-right:10px;
+	padding-left:20px;
+	height: 16px;
+}
