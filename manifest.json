@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "Multi Dictionary Lookup",
+  "version": "2.9",
+  "author": "Evil Electron",
+
+  "description": "Quickly look up a word from several English dictionaries, thesauri and encyclopedias.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mdlookup@evilelectron.com"
+    }
+  },
+  "background" : {
+    "scripts": ["scripts/background.js"]
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["*://*/*"],
+      "js": ["scripts/content.js"]
+    }
+  ],
+  "options_ui": {
+    "page": "ui/options.html"
+  },
+  "permissions": [
+    "menus",
+    "contextMenus",
+    "storage",
+    "*://*/*"
+  ],
+  "default_locale": "en_US"
+}

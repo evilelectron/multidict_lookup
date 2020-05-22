@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <style>
+      .option-title {
+        min-width: 150px;
+        display: inline-block;
+        padding-right: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form id="multidict_lookup-preferences" name="multidict_lookup_preferences_form">
+      <p>Choose the Dictionaries, Thesauri and Encyclopedias you wish to use</p>
+      <fieldset>
+        <legend>Dictionaries</legend>
+        <div>
+          <span class="option-title">The Free Dictionary</span>
+          <label for="freeDictOn">On</label><input type="radio" name="freeDict" id="freeDictOn" value="1" checked="">
+          <label for="freeDictOff">Off</label><input type="radio" name="freeDict" id="freeDictOff" value="0">
+        </div>
+        <div>
+          <span class="option-title">Urban Dictionary</span>
+          <label for="urbanDictOn">On</label><input type="radio" name="urbanDict" id="urbanDictOn" value="1" checked="">
+          <label for="urbanDictOff">Off</label><input type="radio" name="urbanDict" id="urbanDictOff" value="0">
+        </div>
+        <div>
+          <span class="option-title">Bee Dictionary</span>
+          <label for="beeDictOn">On</label><input type="radio" name="beeDict" id="beeDictOn" value="1" checked="">
+          <label for="beeDictOff">Off</label><input type="radio" name="beeDict" id="beeDictOff" value="0">
+        </div>
+        </fieldset>
+      <fieldset>
+        <legend>Thesauri</legend>
+        <div>
+          <span class="option-title">Babylon Thesaurus</span>
+          <label for="babylonThesOn">On</label><input type="radio" name="babylonThes" id="babylonThesOn" value="1" checked="">
+          <label for="babylonThesOff">Off</label><input type="radio" name="babylonThes" id="babylonThesOff" value="0">
+        </div>
+        <div>
+          <span class="option-title">Thesaurus.com</span>
+          <label for="thesaurusThesOn">On</label><input type="radio" name="thesaurusThes" id="thesaurusThesOn" value="1">
+          <label for="thesaurusThesOff">Off</label><input type="radio" name="thesaurusThes" id="thesaurusThesOff" value="0" checked="">
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Encyclopedias</legend>
+        <div>
+          <span class="option-title">English Wikipedia</span>
+          <label for="enWikiOn">On</label><input type="radio" name="enWiki" id="enWikiOn" value="1" checked="">
+          <label for="enWikiOff">Off</label><input type="radio" name="enWiki" id="enWikiOff" value="0">
+        </div>
+        <div>
+          <span class="option-title">TechDict Encyclopedia</span>
+          <label for="techPediaOn">On</label><input type="radio" name="techPedia" id="techPediaOn" value="1">
+          <label for="techPediaOff">Off</label><input type="radio" name="techPedia" id="techPediaOff" value="0" checked="">
+        </div>
+      </fieldset>
+      <div>
+          <span class="option-title">Show Multi Dictionary Lookup options in a submenu</span>
+          <label for="useSubmenuOn">On</label><input type="radio" name="useSubmenu" id="useSubmenuOn" value="1" checked="">
+          <label for="useSubmenuOff">Off</label><input type="radio" name="useSubmenu" id="useSubmenuOff" value="0">
+      </div>
+      <p/>
+      <button type="submit">Save</button>
+    </form>
+    <script src="/scripts/options.js"></script>
+  </body>
+</html>

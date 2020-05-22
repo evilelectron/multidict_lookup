@@ -1,0 +1,11 @@
+{
+  "extensionName": {
+    "message": "Multi Dictionary Lookup",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Quickly look up a word from several English dictionaries, thesauri and encyclopedias.",
+    "description": "Description of the extension."
+  }
+}
