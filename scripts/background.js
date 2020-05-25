@@ -11,7 +11,7 @@ MultiDictLookupBackgroundService = {
 
     dictionaries: {
         freeDict: {
-            enabled: 1,
+            enabled: true,
             url: "https://www.thefreedictionary.com",
             url_append: "/",
             icon: browser.runtime.getURL("icons/tfd-icon.png"),
@@ -19,7 +19,7 @@ MultiDictLookupBackgroundService = {
             selector: "#MainTxt>#Definition>section:nth-child(1)"
         },
         urbanDict: {
-            enabled: 1,
+            enabled: true,
             url: "https://www.urbandictionary.com",
             url_append: "/define.php?term=",
             icon: browser.runtime.getURL("icons/ud-icon.png"),
@@ -27,7 +27,7 @@ MultiDictLookupBackgroundService = {
             selector: "div.def-panel:nth-child(1)>div:nth-child(3)"
         },
         beeDict: {
-            enabled: 1,
+            enabled: true,
             url: "https://www.beedictionary.com",
             url_append: "/meaning/",
             icon: browser.runtime.getURL("icons/beed-icon.png"),
@@ -35,7 +35,7 @@ MultiDictLookupBackgroundService = {
             selector: "#WordsDiv>ul>li:first-child"
         },
         babylonThes: {
-            enabled: 1,
+            enabled: true,
             url: "https://thesaurus.babylon.com",
             url_append: "/",
             icon: browser.runtime.getURL("icons/bt-icon.png"),
@@ -43,7 +43,7 @@ MultiDictLookupBackgroundService = {
             selector: "#last-term"
         },
         thesaurusThes: {
-            enabled: 1,
+            enabled: false,
             url: "https://www.thesaurus.com",
             url_append: "/browse/",
             icon: browser.runtime.getURL("icons/tt-icon.png"),
@@ -51,7 +51,7 @@ MultiDictLookupBackgroundService = {
             selector: "div.synonyms_wrapper>div.synonyms"
         },
         enWiki: {
-            enabled: 1,
+            enabled: true,
             url: "https://en.wikipedia.org",
             url_append: "/wiki/",
             icon: browser.runtime.getURL("icons/wiki-icon.png"),
@@ -59,7 +59,7 @@ MultiDictLookupBackgroundService = {
             selector: "#mw-content-text>p"
         },
         techPedia: {
-            enabled: 0,
+            enabled: false,
             url: "https://www.techdict.org",
             url_append: "/define/",
             icon: browser.runtime.getURL("icons/tech-icon.png"),
