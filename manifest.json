@@ -29,5 +29,19 @@
     "storage",
     "*://*/*"
   ],
+  "web_accessible_resources": [
+    "css/skin.css",
+    "icons/beed-icon.png",
+    "icons/bt-icon.png",
+    "icons/ft-icon.png",
+    "icons/icon.png",
+    "icons/icon16.png",
+    "icons/icon64.png",
+    "icons/tech-icon.png",
+    "icons/tfd-icon.png",
+    "icons/ud-icon.png",
+    "icons/wiki-icon.png",
+    "icons/loading.gif"
+  ],
   "default_locale": "en_US"
 }
