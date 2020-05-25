@@ -72,6 +72,7 @@ MultiDictLookupBackgroundService = {
         var prefStorage = {};
         for (const dictionary in options) {
             this.dictionaries[dictionary].enabled = options[dictionary];
+            prefStorage[dictionary] = options[dictionary];
         };
         browser.storage.sync.set(prefStorage)
         console.log("Options saved");
@@ -98,8 +99,10 @@ MultiDictLookupBackgroundService = {
     createMenus: function() {
         var parentId = "multidict_lookup-context-menu";
         console.log("Create Menus");
-        browser.menus.removeAll();
-        browser.menus.onClicked.removeListener(this.onMenuClicked);
+        if (browser.menus.onClicked.hasListener(MultiDictLookupBackgroundService.onMenuClicked)) {
+            browser.menus.removeAll();
+            browser.menus.onClicked.removeListener(MultiDictLookupBackgroundService.onMenuClicked);
+        }
 
         browser.menus.create({
             id: parentId,
@@ -110,8 +113,7 @@ MultiDictLookupBackgroundService = {
         browser.storage.sync.get().then((prefStorage) => {
             for (prefElem in prefStorage) {
                 prefVal = prefStorage[prefElem];
-                console.log(prefElem + " " + prefVal);
-                if (1 == prefVal && "useSubmenu" != prefElem) {
+                if (prefVal && "useSubmenu" != prefElem) {
                     browser.menus.create({
                         parentId: parentId,
                         id: prefElem,
@@ -122,7 +124,7 @@ MultiDictLookupBackgroundService = {
                 }
             }
         });
-        browser.menus.onClicked.addListener(this.onMenuClicked);
+        browser.menus.onClicked.addListener(MultiDictLookupBackgroundService.onMenuClicked);
 
     },
 
